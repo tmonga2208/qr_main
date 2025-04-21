@@ -3,14 +3,14 @@ import Papa from "papaparse";
 import { getDatabase, ref, set } from "firebase/database";
 import { initializeApp } from "firebase/app";
 
-// Firebase Configuration (Replace with your credentials)
+
 const firebaseConfig = {
-  apiKey: "AIzaSyArvC1YDkwapW4Fqcq6By2aMGfGTByx4QA",
-  authDomain: "devgram-2.firebaseapp.com",
-  projectId: "devgram-2",
-  storageBucket: "devgram-2.firebasestorage.app",
-  messagingSenderId: "605517421296",
-  appId: "1:605517421296:web:e990718c43cc910d084035"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
